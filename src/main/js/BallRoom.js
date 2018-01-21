@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var ons = require('onsenui');
 var Ons = require('react-onsenui');
 var client = require('./client');
-import SlideshowTest from './SlideshowTest';
+import BallRoom1 from './BallRoom1';
 
 export default class BallRoom extends React.Component {
  renderToolbar() {
@@ -27,8 +27,8 @@ export default class BallRoom extends React.Component {
     this.props.navigator.popPage();
   }
 
-  SlideshowTest() {
-    this.props.navigator.pushPage({ component: SlideshowTest, props: { key: 'slideshowTest' } });
+  BallRoom1() {
+    this.props.navigator.pushPage({ component: BallRoom1, props: { key: 'ballRoom1' } });
   }
 
   render() {
@@ -50,7 +50,7 @@ export default class BallRoom extends React.Component {
             <div style={{ textAlign: 'center' }}>
               <img src={"https://www.img.in.th/images/8d174cb6b29a6b703685804b157952e8.jpg"} style={{width: '50%'}}  /><br/>
               <br/>
-              <Ons.Button onClick={this.SlideshowTest.bind(this, SlideshowTest)}>รายละเอียดห้อง </Ons.Button><br/><br/>
+              <Ons.Button onClick={this.BallRoom1.bind(this, BallRoom1)}>รายละเอียดห้อง </Ons.Button><br/><br/>
 
             </div>
           </Ons.ListItem>
