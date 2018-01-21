@@ -33,29 +33,52 @@ export default class BallRoom extends React.Component {
 
   render() {
     return (
-      <Ons.Page renderToolbar={this.renderToolbar.bind(this)}>
-        <div style={{ textAlign: 'center' }}>
-           <h1>บริการจองห้องจัดเลี้ยง</h1>
+      <Ons.Toolbar>
+        <div className='center'>โรงแรงTeam15</div>
+        <div className='right'>
+          <Ons.ToolbarButton onClick={this.showMenu.bind(this)}>
+            <Ons.Icon icon='ion-navicon, material:md-menu' />
+          </Ons.ToolbarButton>
         </div>
-        <img src={"https://www.picz.in.th/images/2018/01/21/99859ek9e5hbdfa78k6bj.jpg"} style={{width: '100%'}}  />
-        <Ons.ListTitle>เลือกห้องจัดเลี้ยง</Ons.ListTitle>
-          <Ons.List>
-          <br/>
+      </Ons.Toolbar>
+    );
+  }
 
-            <div style={{ textAlign: 'center' }}>
-               ROOM1
-            </div>
+  showMenu() {
+    this.props.showMenu();
+  }
 
-          <Ons.ListItem>
-            <div style={{ textAlign: 'center' }}>
-              <img src={"https://www.img.in.th/images/8d174cb6b29a6b703685804b157952e8.jpg"} style={{width: '50%'}}  /><br/>
+  popPage() {
+    this.props.navigator.popPage();
+  }
+
+  render() {
+    return (
+      <Ons.Page renderToolbar={this.renderToolbar.bind(this)}>
+       <Ons.Card>
+        <div style={{ textAlign: 'center' }}>
+
+           <h1>บริการจองห้องจัดเลี้ยง</h1>
+
+            <img src={"https://www.picz.in.th/images/2018/01/21/Gif-.gif"} style={{width: '100%'}}  />
+             </div>
+        </Ons.Card>
+
+           <Ons.ListTitle>เลือกห้องจัดเลี้ยง</Ons.ListTitle
+           >
+           <Ons.Card>
+
+                <div style={{ textAlign: 'center' }}>
+                  ROOM1
+               </div>
+
+                 <div style={{ textAlign: 'center' }}>
+               <img src={"https://www.img.in.th/images/8d174cb6b29a6b703685804b157952e8.jpg"} style={{width: '20%'}}  /><br/>
               <br/>
               <Ons.Button onClick={this.BallRoom1.bind(this, BallRoom1)}>รายละเอียดห้อง </Ons.Button><br/><br/>
 
-            </div>
-          </Ons.ListItem>
-
-        </Ons.List>
+               </div>
+           </Ons.Card>
 
 
         <p style={{ textAlign: 'center', opacity: '0.6', paddingTop: '20px' }}>
