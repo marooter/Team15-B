@@ -4,10 +4,14 @@ var ons = require('onsenui');
 var Ons = require('react-onsenui');
 var client = require('./client');
 import BallRoom from './BallRoom';
-export default class Home extends React.Component{
+
+let imgUrl = 'https://www.picz.in.th/images/2018/01/24/Sea_Beach_Background.jpg';
+
+export default class Home extends React.Component {
    renderToolbar() {
     return (
-      <Ons.Toolbar>
+      <Ons.Toolbar style={{backgroundColor: '#00BFFF'}}>
+
         <div className='center'> ยินต้อนรับ </div>
       </Ons.Toolbar>
     );
@@ -17,8 +21,8 @@ export default class Home extends React.Component{
     this.props.showMenu();
   }
 
-  pushPage() {
-    this.props.navigator.pushPage({ component: BallRoom, props: { key: 'ballRoom' } });
+  PageBallRoom() {
+    this.props.navigator.pushPage({ component: BallRoom, props: { key: 'ballroom' } });
   }
 
 render() {
@@ -29,7 +33,7 @@ render() {
         <div style={{ textAlign: 'center' }}>
           <br />
 
-           <Ons.Button onClick={this.pushPage.bind(this)}>จองห้องจัดเลี้ยง</Ons.Button><br /><br />
+           <Ons.Button onClick={this.PageBallRoom.bind(this)}>จองห้องจัดเลี้ยง</Ons.Button><br /><br />
            <Ons.Button>จองห้องพัก</Ons.Button><br /><br />
            <Ons.Button>ยกเลิกห้องพัก</Ons.Button><br /><br />
            <Ons.Button>แจ้งทำความสะอาด</Ons.Button><br /><br />
